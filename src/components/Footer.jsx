@@ -1,3 +1,9 @@
-export default function Footer(){
-    return (<h3>Copyrights 2004@</h3>)
+import React from 'react'
+
+export default function Footer() {
+  return (
+    <div>
+      @Copyright 2025. All rights reserved.
+    </div>
+  )
 }
