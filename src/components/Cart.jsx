@@ -28,7 +28,7 @@ export default function Cart() {
       },
     ]);
     setCart({});
-    Navigate("/orders")
+    Navigate("/orders");
   };
   useEffect(() => {
     setOrderValue(
@@ -57,12 +57,11 @@ export default function Cart() {
           )}
           <h3>Order Value:{orderValue}</h3>
           <p>
-
-            {
-              user.email ?  (<button onClick={placeOrder}>Place Order</button>) :  
-              (<button>Login to Order</button>)
-            }
-
+            {user.email ? (
+              <button onClick={placeOrder}>Place Order</button>
+            ) : (
+              <button onClick={()=>Navigate("/login")}>Login to Order</button>
+            )}
           </p>
         </>
       ) : (
